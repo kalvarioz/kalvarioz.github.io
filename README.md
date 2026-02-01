@@ -1,2 +1,2 @@
-# kalvarioz.github.io/lab1/
+# kalvarioz.github.io
 
