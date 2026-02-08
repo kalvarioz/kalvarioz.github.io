@@ -4,150 +4,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CS Topic - Viruses</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+    <title>CS Topic - General Computer Security</title>
+    <link rel="stylesheet" href="css/index.css">
 
-        }
-
-        main {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            flex: 1;
-            padding: 2rem;
-            background-color: rgb(8, 60, 3);
-            flex-direction: column;
-            align-items: center;
-            color: white;
-        }
-
-        h1 {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: black;
-            box-shadow: 5px 5px 10px #aaaaaa;
-            padding: 10px;
-            background-color: rgb(53, 95, 66);
-        }
-
-        nav {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            background-color: rgb(53, 95, 66);
-            padding: 10px;
-            color: black;
-        }
-
-        nav ul {
-            display: flex;
-            top: 0;
-            gap: 30px;
-            background-color: rgb(180, 180, 180);
-            box-shadow: 5px 5px 10px rgb(0, 0, 0);
-            justify-content: center;
-            list-style: none;
-
-        }
-
-        nav a {
-            color: black;
-            text-decoration: none;
-        }
-
-        .paragraphs {
-            display: flex;
-            justify-content: center;
-        }
-
-        .paragraphs p {
-            color: cornflowerblue;
-        }
-    </style>
 </head>
 
 <body>
-    <h1>Learning about: Malware</h1>
-    <nav>
-        <ul>
-            <li><a href="win_def.html" class="active">Sub-topic: Windows Defender</a></li>
-            <li><a href="rans.html">Sub-topic: Government Seizing</a></li>
-            <li><a href="ads.html">Sub-topic: Adware</a></li>
-        </ul>
-    </nav>
+    <header>
+        <h1>Learning about: Malware</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home / Malware Overview</a></li>
+                <li><a href="win_def.html">Sub-topic: Windows Defender</a></li>
+                <li><a href="cracked_software.html">Sub-topic: Cracked Software</a></li>
+                <li><a href="linux_protect.html">Sub-topic: Linux Security</a></li>
+            </ul>
+        </nav>
+    </header>
+
     <main>
         <section id="definitions">
             <div class="paragraphs">
-                <p>Malware is the thing that everyone tells you to keep out of your systems.
-                    it is a series of malicous software that has the capability to spread between computers and causes
-                    potential
-                    damage to data and computers.
-                </p><br>
+                <p>Malware is a series of malicious software that has the capability to spread between computers and
+                    causes
+                    potential damage to data and computers. It is the largest threat to online programming and networks,
+                    and since then, there have been some unique varints of these softwares, each having a purpose or
+                    style of attacking their target (such as being hidden, and stealing resources and data, or going
+                    brute and encrypting a users files for ransom, along with other techniques). This page provides a
+                    simple overview of these types.
+                </p>
             </div>
 
             <div class="paragraphs">
-                <p>it has the capability to cause disruption to a computer, server, client, or computer network.
+                <p>Generally, malware has the capability to cause disruption to a computer, server, client, or computer
+                    network.
                     From here, it can leak private information, gain and block access to IT or administrative systems.
                     Depending on the malware, it may or may not be able to be detected by antiviruses and the user
                     themselves.
                 </p>
             </div>
         </section>
+
         <section id="malwaretypes">
-            <h1> TYPES OF MALWARE</h1>
-            <div class="ransom">
-                <h3>RANSOMWARE</h3>
-                <p>Ransomware is a type of malicious software (malware) designed to block access to a computer system,
-                    network, or data by encrypting files.
-                    Attackers demand a ransom payment, typically in cryptocurrency like Bitcoin, to restore access.
-                    Modern attacks often involve stealing data before encryption, threatening to expose it if payment is
-                    not made (double extortion)
-                </p>
-            </div>
-            <div class="spy">
-                <h3>SPYWARE</h3>
-            </div>
-            <div class="trojan">
-                <h3>TROJANS</h3>
-                <p>
-                    A Trojan virus (or Trojan horse) is a type of malicious software that disguises itself as
-                    legitimate,
-                    safe software to trick users into installing it. Unlike viruses, Trojans do not self-replicate, but
-                    once activated, they can steal data, delete files,
-                    spy on users, or allow unauthorized remote access to a computer.
-                </p>
-            </div>
-            <div class="worm">
-                <h3>WORMS</h3>
-                <p>A computer worm is a type of self-replicating, standalone malware that spreads across networks
-                    without requiring human interaction or a host file. Unlike viruses, worms exploit security
-                    vulnerabilities to
-                    automatically copy themselves from computer to computer, often causing significant damage by
-                    consuming bandwidth and overloading system</p>
-            </div>
-            <div class="virus">
-                <h3>VIRUSES</h3>
-                <p>A computer virus is
-                    a type of malicious software (malware) designed to spread between computers by attaching itself to
-                    legitimate programs, files, or documents. Once executed,
-                    it replicates by inserting its code into other files, causing damage to data, stealing information,
-                    or disrupting system performance. They often rely on user action, such as opening an
-                    infected email attachment or clicking a link, to spread. </p>
-            </div>
-            <div class="rootk">
-                <h3>ROOTKITS</h3>
-                <p>
-                    A rootkit is a type of malicious software (malware) designed to provide unauthorized,
-                    administrative-level access to a computer while actively hiding its presence from users, operating
-                    systems, and security software
-                    . The term is derived from "root" (the top-level, privileged account in Unix/Linux) and "kit" (the
-                    software components that facilitate this access).
-                </p>
-            </div>
+            <h1>TYPES OF MALWARE</h1>
+
+            <article class="malware-category">
+                <div class="malware-content">
+                    <h3>RANSOMWARE</h3>
+                    <p>Ransomware is a type of malicious software (malware) designed to block access to a computer
+                        system,
+                        network, or data by encrypting files.
+                        Attackers demand a ransom payment, typically in cryptocurrency like Bitcoin, to restore access.
+                        Modern attacks often involve stealing data before encryption, threatening to expose it if
+                        payment is
+                        not made (double extortion).
+                    </p>
+                </div>
+                <figure>
+                    <img src="images/Wana_Decrypt0r_screenshot.png" alt="WannaCry ransomware screenshot">
+                </figure>
+            </article>
+
+            <article class="malware-category">
+                <div class="malware-content">
+                    <h3>SPYWARE</h3>
+                    <p>
+                        Spyware is malicious software that secretly infiltrates your device to gather personal
+                        information
+                        and activities, sending it to unauthorized third parties, often for financial gain, identity
+                        theft,
+                        or marketing, by monitoring keystrokes, capturing data like passwords and credit card numbers,
+                        tracking location, and even accessing your camera and microphone.
+                    </p>
+                </div>
+                <figure>
+                    <img src="images/spyware-1.jpg" alt="Spyware concept illustration">
+                </figure>
+            </article>
+
+            <article class="malware-category">
+                <div class="malware-content">
+                    <h3>TROJANS</h3>
+                    <p>
+                        A Trojan virus (or Trojan horse) is a type of malicious software that disguises itself as
+                        legitimate,
+                        safe software to trick users into installing it. Unlike viruses, Trojans do not self-replicate,
+                        but
+                        once activated, they can steal data, delete files,
+                        spy on users, or allow unauthorized remote access to a computer.
+                    </p>
+                </div>
+                <figure>
+                    <img src="images/trojan_android_img.png" alt="Trojan horse malware concept">
+                </figure>
+            </article>
+
+            <article class="malware-category">
+                <div class="malware-content">
+                    <h3>WORMS</h3>
+                    <p>A computer worm is a type of self-replicating, standalone malware that spreads across networks
+                        without requiring human interaction or a host file. Unlike viruses, worms exploit security
+                        vulnerabilities to
+                        automatically copy themselves from computer to computer, often causing significant damage by
+                        consuming bandwidth and overloading systems.
+                    </p>
+                </div>
+                <figure>
+                    <img src="images/Virus_Blaster.jpg" alt="Blaster worm warning screen">
+                </figure>
+            </article>
+
+            <article class="malware-category">
+                <div class="malware-content">
+                    <h3>VIRUSES</h3>
+                    <p>A computer virus is a type of malicious software (malware) designed to spread between computers
+                        by
+                        attaching itself to legitimate programs, files, or documents. Once executed,
+                        it replicates by inserting its code into other files, causing damage to data, stealing
+                        information,
+                        or disrupting system performance. They often rely on user action, such as opening an
+                        infected email attachment or clicking a link, to spread.
+                    </p>
+                </div>
+                <figure>
+                    <img src="images/Onlineantivirus.net_-1024x722.jpg" alt="Computer virus illustration">
+                </figure>
+            </article>
+
+            <article class="malware-category">
+                <div class="malware-content">
+                    <h3>ROOTKITS</h3>
+                    <p>
+                        A rootkit is a type of malicious software (malware) designed to provide unauthorized,
+                        administrative-level access to a computer while actively hiding its presence from users,
+                        operating
+                        systems, and security software. The term is derived from "root" (the top-level, privileged
+                        account
+                        in Unix/Linux) and "kit" (the software components that facilitate this access).
+                    </p>
+                </div>
+                <figure>
+                    <img src="images/skidmap-linux-malware-4-2.png" alt="Rootkit concept illustration">
+                </figure>
+            </article>
 
         </section>
-
-
     </main>
+
+    <footer id="references-footer">
+        <button id="toggle-refs" class="references-btn">
+            <span>References</span>
+            <span class="arrow">v</span>
+        </button>
+
+        <div class="references-panel">
+            <h3>Image Sources</h3>
+            <ul>
+                <li>WannaCry Ransomware Screenshot - <a
+                        href="https://en.wikipedia.org/wiki/WannaCry_ransomware_attack">Wikipedia</a></li>
+                <li>Spyware Screenshot -<a href="https://computer.howstuffworks.com/spyware.htm"> HowStuffWorks</a>
+                </li>
+                <li>Android Trojan - <a href="https://securelist.com/mobile-malware-review-2017/84139/">SecureList</a>
+                </li>
+                <li>Blaster Worm Screenshot - <a
+                        href="https://en.wikipedia.org/wiki/Blaster_(computer_worm)">Wikipedia</a></li>
+                <li>Virus Analysis - <a
+                        href="https://www.virusbulletin.com/blog/2015/07/compromised-site-serves-nuclear-exploit-kit-together-fake-bsod/">Virusbulletin</a>
+                </li>
+                <li>Skidmap Rootkit - <a
+                        href="https://www.trendmicro.com/en_us/research/19/i/skidmap-linux-malware-uses-rootkit-capabilities-to-hide-cryptocurrency-mining-payload.html">Trend
+                        Micro</a></li>
+            </ul>
+
+            <h3>Information Sources</h3>
+            <ul>
+                <li>IBM - <a href="https://www.ibm.com/think/topics/malware" target="_blank">What is Malware?
+                        Types,Examples & Protection</a></li>
+                <li>Fortinet - <a href="https://www.fortinet.com/resources/cyberglossary/spyware" target="_blank">What
+                        is Spyware? Definition & Protection</a></li>
+                <li>HowStuffWorks - <a href="https://computer.howstuffworks.com/spyware.htm" target="_blank">How Spyware
+                        Works</a></li>
+                <li>SentinelOne - <a
+                        href="https://www.sentinelone.com/cybersecurity-101/threat-intelligence/what-is-trojan-horse/"
+                        target="_blank">What is a Trojan Horse? Types & Prevention</a></li>
+                <li>Norton - <a href="https://us.norton.com/blog/malware/what-is-a-computer-worm" target="_blank">What
+                        is a Computer Worm?</a></li>
+                <li>Trend Micro - <a href="https://www.trendmicro.com/vinfo/us/security/definition/rootkit"
+                        target="_blank">What is a Rootkit?</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Security - Protecting Your System</title>
+    <link rel="stylesheet" href="css/linux_protect.css">
+</head>
+
+<body>
+    <header>
+        <h1>Protecting Yourself as a Linux User</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home / Malware Overview</a></li>
+                <li><a href="win_def.html">Sub-topic: Windows Defender</a></li>
+                <li><a href="cracked_software.html">Sub-topic: Cracked Software</a></li>
+                <li><a href="linux_protect.html">Sub-topic: Linux Security</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="definitions">
+            <h2>Overview</h2>
+            <div class="paragraphs">
+                <div class="content-wrapper">
+                    <img src="images/Tux.svg.png" alt="Linux Tux penguin mascot">
+                    <p>
+                        Some people think that Linux is less secure because it doesn't have the sleek and persistent features that
+                        Windows has with antivirus software and Windows Defender. However, Linux takes a fundamentally different 
+                        approach to security that emphasizes prevention over detection.
+                    </p>
+                    <p>
+                        Linux security consists of regular patching, strict user permissions (least privilege principle), firewalls
+                        (UFW/iptables), SSH hardening, and mandatory access controls (SELinux/AppArmor). Key measures also
+                        include disabling unused services, using encryption, strong authentication (2FA/SSH keys), and
+                        continuous monitoring and logging to minimize the attack surface.
+                    </p>
+                    <p>
+                        This page covers fundamental security tools and how you can use them to set up a protected
+                        desktop environment in Linux.
+                    </p>
+                </div>
+            </div>
+
+            <h3>Firewall - UFW (Uncomplicated Firewall)</h3>
+            <div class="paragraphs">
+                <p>
+                    UFW (Uncomplicated Firewall) is the default, user-friendly command-line firewall configuration tool
+                    for Ubuntu and Debian-based Linux systems. It acts as a frontend for iptables or nftables to
+                    simplify managing network traffic (IPv4/IPv6).
+                </p>
+                <div class="code-example">
+                    <h4>Basic UFW Commands:</h4>
+                    <pre><code># Enable the firewall
+sudo ufw enable
+
+# Check status
+sudo ufw status verbose
+
+# Allow SSH (important!)
+sudo ufw allow 22/tcp
+
+# Allow HTTP and HTTPS
+sudo ufw allow 80/tcp
+sudo ufw allow 443/tcp
+
+# Deny a specific port
+sudo ufw deny 23/tcp
+
+# Default policies
+sudo ufw default deny incoming
+sudo ufw default allow outgoing</code></pre>
+                </div>
+                
+                <h4>Why does it matter?</h4>
+                <p>
+                    <strong>Reduces Attack Surface:</strong> By blocking unnecessary services and ports, fewer entry points exist for
+                    attackers to exploit.<br><br>
+                    <strong>Prevents Unauthorized Access:</strong> Effectively stops unauthorized connection attempts to services
+                    running on your system.<br><br>
+                    <strong>Accessibility:</strong> Makes robust firewall protection accessible to beginners and pros alike, ensuring
+                    firewalls are actually used instead of being too complex to configure.
+                </p>
+            </div>
+
+            <h3>AppArmor - Mandatory Access Control</h3>
+            <div class="paragraphs">
+                <p>
+                    AppArmor (Application Armor) is a Linux security module that implements Mandatory Access Control (MAC) 
+                    by confining programs to a limited set of resources using per-program profiles. Unlike traditional 
+                    Discretionary Access Control (DAC), AppArmor policies define what files, network access, and capabilities 
+                    an application can use, preventing unauthorized actions even if the program is compromised.
+                </p>
+                
+                <div class="code-example">
+                    <h4>Working with AppArmor:</h4>
+                    <pre><code># Check AppArmor status
+sudo aa-status
+
+# View loaded profiles
+sudo apparmor_status
+
+# Set profile to complain mode (logging only)
+sudo aa-complain /etc/apparmor.d/usr.bin.firefox
+
+# Set profile to enforce mode
+sudo aa-enforce /etc/apparmor.d/usr.bin.firefox
+
+# Disable a profile
+sudo ln -s /etc/apparmor.d/usr.bin.firefox /etc/apparmor.d/disable/
+sudo apparmor_parser -R /etc/apparmor.d/usr.bin.firefox</code></pre>
+                </div>
+                
+                <h4>Why does it matter?</h4>
+                <p>
+                    <strong>Limits Damage from Exploits:</strong> If an application like a web browser is compromised, AppArmor prevents 
+                    attackers from accessing sensitive files or escalating privileges. For example, a compromised Firefox process 
+                    can't read your SSH keys or modify system files.<br><br>
+                    <strong>Default Protection:</strong> Many distributions (Ubuntu, SUSE, Arch via AUR) ship with AppArmor profiles for 
+                    common services like Apache, MySQL, and Firefox, providing immediate protection.<br><br>
+                    <strong>Complements Firewalls:</strong> While firewalls control network traffic, AppArmor controls what applications 
+                    can do on the system itself, creating defense in depth.
+                </p>
+            </div>
+
+            <h3>Why Linux is Inherently More Secure</h3>
+            <div class="paragraphs security-advantages">
+                <p>
+                    <strong>1. Permission Model:</strong> Linux uses a strict user/group/other permission system with the principle 
+                    of least privilege. Regular users cannot modify system files or install software system-wide without explicit 
+                    sudo/root access.<br><br>
+                    
+                    <strong>2. Package Managers:</strong> Software is installed through cryptographically signed packages from trusted 
+                    repositories (pacman, apt, dnf). This prevents malware disguised as legitimate software.<br><br>
+                    
+                    <strong>3. Open Source:</strong> The source code is publicly available and audited by thousands of developers 
+                    worldwide, making it harder for backdoors or vulnerabilities to remain hidden.<br><br>
+                    
+                    <strong>4. No Admin by Default:</strong> Unlike Windows where users often run with administrator privileges, 
+                    Linux requires explicit elevation (sudo) for privileged operations.<br><br>
+                    
+                    <strong>5. Smaller Attack Surface:</strong> You install only what you need. Minimal installations don't include 
+                    unnecessary services that could be exploited.<br><br>
+                    
+                    <strong>6. Frequent Updates:</strong> Rolling release distributions (like Arch) receive security patches 
+                    immediately, often within hours of disclosure.
+                </p>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="references-footer">
+        <button id="toggle-refs" class="references-btn">
+            <span>References</span>
+            <span class="arrow">v</span>
+        </button>
+
+        <div class="references-panel">
+            <h3>Image Sources</h3>
+            <ul>
+                <li>Tux Penguin - Linux Foundation, Public Domain</li>
+            </ul>
+
+            <h3>Information Sources</h3>
+            <ul>
+                <li>Ubuntu Documentation - <a href="https://help.ubuntu.com/community/UFW" target="_blank">UFW - Uncomplicated Firewall</a></li>
+                <li>DigitalOcean - <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu" target="_blank">How To Set Up a Firewall with UFW</a></li>
+                <li>AppArmor Wiki - <a href="https://gitlab.com/apparmor/apparmor/-/wikis/home" target="_blank">Official AppArmor Documentation</a></li>
+                <li>Ubuntu Security - <a href="https://ubuntu.com/security/apparmor" target="_blank">AppArmor Security Profiles</a></li>
+                <li>Arch Wiki - <a href="https://wiki.archlinux.org/title/AppArmor" target="_blank">AppArmor on Arch Linux</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

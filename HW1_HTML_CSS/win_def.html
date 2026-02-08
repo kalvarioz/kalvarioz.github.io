@@ -1,11 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Windows Defender - Built-in Security</title>
+    <link rel="stylesheet" href="css/windows_def.css">
 </head>
+
 <body>
-    
+    <header>
+        <h1>Learning about: Windows Defender</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home / Malware Overview</a></li>
+                <li><a href="win_def.html">Sub-topic: Windows Defender</a></li>
+                <li><a href="cracked_software.html">Sub-topic: Cracked Software</a></li>
+                <li><a href="linux_protect.html">Sub-topic: Linux Security</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="definitions">
+            <div class="paragraphs">
+                <div class="content-text">
+                    <p>Microsoft Defender Antivirus (formerly Windows Defender) is a free, built-in security suite in
+                        Windows 10/11 that provides real-time, always-on protection against malware, viruses, and
+                        ransomware. It requires no installation, as it activates automatically upon installation of the
+                        OS. Users can manage settings, run scans, and check protection status via the Windows Security
+                        app.
+                    </p>
+                </div>
+                <figure>
+                    <img src="images/Microsoft_Defender_Icon_Logo_2025_English.svg.png" alt="Windows Defender Logo">
+                </figure>
+            </div>
+
+            <div class="paragraphs">
+                <p>
+                    Although it has a mixed view for many areas of cybersecurity, it is arguably among one of the best
+                    free antimalware solutions on the internet at the moment. It has powerful capabilities such as
+                    real-time protection, behavior monitoring, cloud-based AI, and signature matching to analyze files
+                    and processes instantly upon access. It scans for suspicious activity, checks file reputations, and
+                    uses heuristic analysis to block threats before they execute, supported by frequent automated
+                    updates.
+                </p>
+            </div>
+
+            <h3>Key Features</h3>
+            <div class="paragraphs">
+                <p>
+                    <strong>Real-Time Protection:</strong> Continuously monitors files, downloads, and programs for
+                    malicious activity.<br><br>
+                    <strong>Cloud-Delivered Protection:</strong> Uses Microsoft's cloud infrastructure to identify
+                    emerging threats faster than traditional signature-based detection.<br><br>
+                    <strong>Ransomware Protection:</strong> Controlled folder access prevents unauthorized changes to
+                    important files.<br><br>
+                    <strong>Network Protection:</strong> Blocks connections to malicious websites and prevents phishing
+                    attacks.<br><br>
+                    <strong>Automatic Updates:</strong> Security intelligence updates are delivered multiple times per
+                    day through Windows Update.
+                </p>
+            </div>
+
+            <h3>Limitations</h3>
+            <div class="paragraphs">
+                <p>
+                    While Windows Defender provides robust protection for most users, it can interfere with legitimate
+                    security research, software development, and penetration testing activities. Security researchers
+                    often need to disable certain protections to analyze malware samples or test security tools.
+                    However, disabling Windows Defender should only be done in controlled environments and never on
+                    production systems.
+                </p>
+            </div>
+        </section>
+    </main>
+
+     <footer id="references-footer">
+        <button id="toggle-refs" class="references-btn">
+            <span>References</span>
+            <span class="arrow">v</span>
+        </button>
+
+        <div class="references-panel">
+            <h3>Image Sources</h3>
+            <ul>
+                <li>Microsoft Defender Logo - <a
+                        href="https://en.wikipedia.org/wiki/Microsoft_Defender_Antivirus">Wikipedia</a></li>
+            </ul>
+
+            <h3>Information Sources</h3>
+            <ul>
+                <li>Microsoft - <a
+                        href="https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/microsoft-defender-antivirus-windows"
+                        target="_blank">Microsoft Defender Antivirus in Windows</a></li>
+                <li>GuidePoint Security - <a href="https://www.guidepointsecurity.com/blog/byovd-attacks/"
+                        target="_blank">Bring Your Own Vulnerable Driver (BYOVD) Attacks</a></li>
+                <li>MITRE ATT&CK - <a href="https://attack.mitre.org/techniques/T1562/001/" target="_blank">Impair
+                        Defenses: Disable or Modify Tools</a></li>
+                <li>Bleeping Computer - <a
+                        href="https://www.bleepingcomputer.com/news/microsoft/windows-defender-vs-third-party-antivirus/"
+                        target="_blank">Windows Defender Performance Analysis</a></li>
+                <li>TechRadar - <a href="https://www.techradar.com/news/is-windows-defender-good-enough"
+                        target="_blank">Is Windows Defender Good Enough?</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
+
 </html>

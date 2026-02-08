@@ -1,0 +1,188 @@
+/*
+Brandon Calvario
+
+
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 4, 128);
+    padding-bottom: 60px;
+}
+
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    box-shadow: 5px 5px 10px #570202;
+    padding: 10px;
+    background-color: rgb(0, 10, 192);
+}
+
+nav {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: dodgerblue;
+    padding: 10px;
+    color: black;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    background-color: rgb(0, 10, 192);
+    box-shadow: 5px 5px 10px rgb(14, 0, 0);
+    justify-content: center;
+    list-style: none;
+}
+
+nav a {
+    color: rgb(245, 240, 240);
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+main {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 2rem;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#definitions {
+    margin-top: 20px;
+}
+
+#definitions h3 {
+    color: skyblue;
+    margin: 30px 0 15px 0;
+    font-size: 1.5rem;
+    border-bottom: 2px solid dodgerblue;
+    padding-bottom: 10px;
+}
+
+.paragraphs {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: rgb(120, 108, 230);
+    border-radius: 10px;
+}
+
+.paragraphs p {
+    color: white;
+    line-height: 1.8;
+    flex: 1;
+}
+
+.paragraphs figure {
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.paragraphs figure img {
+    width: 250px;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 5px 5px 10px rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.references-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(0, 10, 192);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.4);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.references-btn:hover {
+    background-color: rgb(39, 21, 129);
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-left: 10px;
+}
+
+.toggle-checkbox:checked+.references-btn .arrow {
+    transform: rotate(180deg);
+}
+
+.references-panel {
+    max-height: 0;
+    overflow: hidden;
+    background-color: rgb(0, 52, 104);
+    transition: max-height 0.4s ease;
+    color: white;
+}
+
+.toggle-checkbox:checked~.references-panel {
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 20px 30px;
+}
+
+.references-panel h3 {
+    color: rgb(240, 240, 240);
+    margin: 15px 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.references-panel ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.references-panel li {
+    padding: 8px 0;
+    padding-left: 15px;
+    color: white;
+    border-left: 3px solid rgb(0, 10, 192);
+    margin-bottom: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.references-panel a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.references-panel a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

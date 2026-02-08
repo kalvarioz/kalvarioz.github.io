@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-image:url(images/images.jpeg) ;
+            background-size: cover;
+            /* background-position:center ;
+            background-attachment: fixed; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+
+        }
+
+        h1 {
+            color: white;
+            padding: 20px;
+            margin: 20px 0 40px 0;
+            background-color: burlywood;
+            
+        }
+        .game-container{
+            padding: 40px;
+            color: wheat;
+           
+        }
+        .info{
+            text-align: center;
+            margin-bottom: 20px;
+            padding:40px;
+            color: white;
+            background-color: burlywood;
+        }
+        .guesses-left{
+            color:white;
+        }
+        button{
+            padding:20px;
+            border: none;
+
+        }
+        input{
+            width:110px;
+            padding:12px;
+            background-color: wheat;
+            border: none;
+        }
+        button:hover{
+            background-color: brown;
+        }
+        .success{
+            background-color: green;
+            color:wheat;
+        }
+        .fail{
+            background-color: red;
+            color: wheat;
+        }
+    
+        
+
+
+    </style>
+</head>
+
+<body>
+    <h1>Number Guessing Game</h1>
+
+    <div class="game-container">
+        <div class="info">
+            <p>Guess a number between 1 and 99</p>
+            <p>Guesses remaining: <span class="guesses-left" id="guessesLeft">7</span></p>
+        </div>
+
+        <input type="number" id="guessInput" min="1" max="99" placeholder="Enter your guess">
+        <button id="submitBtn">Submit Guess</button>
+
+        <div id="message"></div>
+
+        <button class="reset-btn" style="display: none;" id="resetBtn">Play Again</button>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
