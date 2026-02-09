@@ -116,6 +116,7 @@ footer {
     color: white;
     text-align: center;
     cursor: pointer;
+    border: none;
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.4);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1rem;
@@ -123,7 +124,7 @@ footer {
 }
 
 .references-btn:hover {
-    background-color: rgb(39, 21, 129);
+    background-color: rgb(117, 130, 255);
 }
 
 .arrow {
@@ -132,7 +133,7 @@ footer {
     margin-left: 10px;
 }
 
-.toggle-checkbox:checked+.references-btn .arrow {
+.references-btn.active .arrow {
     transform: rotate(180deg);
 }
 
@@ -144,14 +145,16 @@ footer {
     color: white;
 }
 
-.toggle-checkbox:checked~.references-panel {
+.references-panel.open {
     max-height: 500px;
     overflow-y: auto;
     padding: 20px 30px;
 }
 
 .references-panel h3 {
-    color: rgb(240, 240, 240);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    color: rgb(180, 180, 180);
     margin: 15px 0 10px 0;
     font-size: 1.2rem;
 }
@@ -163,26 +166,23 @@ footer {
 }
 
 .references-panel li {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
     padding: 8px 0;
     padding-left: 15px;
     color: white;
-    border-left: 3px solid rgb(0, 10, 192);
+    border-left: 3px solid rgb(53, 95, 66);
     margin-bottom: 5px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.03);
 }
 
 .references-panel a {
-    color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    color: rgb(100, 180, 255);
     text-decoration: none;
-    font-weight: bold;
 }
 
 .references-panel a:hover {
     text-decoration: underline;
-}
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
 }
