@@ -1,0 +1,126 @@
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+
+  body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background-image: url(images/mountain_bike.jpg);
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+
+
+  }
+
+  h1 {
+      color: white;
+      padding: 20px;
+      align-items: center;
+      background-color: burlywood;
+      border-radius: 10px;
+
+  }
+
+  .game-container {
+      padding: 40px;
+      color: white;
+
+  }
+
+  .info {
+      text-align: center;
+      margin-bottom: 20px;
+      padding: 20px;
+      color: white;
+      background-color: burlywood;
+      border-radius: 10px;
+
+  }
+  .game-stats{
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    color: white;
+    background-color: rgba(139, 69, 19, 0.8);
+  }
+
+  .guesses-left {
+      color: white;
+
+  }
+
+  #guessList {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+
+  #guessList li {
+      padding: 5px 10px;
+      background-color: burlywood;
+      color: black;
+      border-radius: 3px;
+  }
+
+  .guessHist {
+      margin: 20px;
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 2px 4px black;
+  }
+
+  .guessHist h3 {
+      color: white;
+      margin-bottom: 10px;
+      background-color: burlywood;
+      padding: 10px;
+      border-radius: 10px;
+  }
+
+  button {
+      padding: 10px;
+      border: none;
+      display: flex;
+      flex-direction: column;
+      border-radius: 10px;
+      gap: 10px;
+
+
+  }
+
+  input {
+      width: 410px;
+      padding: 12px;
+      background-color: burlywood;
+      border: none;
+      border-radius: 10px;
+      margin-bottom: 10px;
+
+
+  }
+
+  #message {
+      margin: 15px 0;
+      padding: 15px;
+      border-radius: 5px;
+      font-weight: bold;
+  }
+
+  button:hover {
+      background-color: rgb(60, 60, 60);
+  }
+
+  .success {
+      background-color: green;
+      color: white;
+  }
+
+  .fail {
+      background-color: darkred;
+      color: white;
+  }

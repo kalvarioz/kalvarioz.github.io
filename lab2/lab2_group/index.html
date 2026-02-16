@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2 - Number Guessing Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1>Number Guessing Game</h1>
+
+    <div class="game-container">
+        <div class="info">
+            <p>Guess a number between 1 and 99</p>
+            <p>Guesses remaining: <span class="guesses-left" id="guessesLeft">7</span></p>
+        </div>
+         <div id="game-stats">
+            <p>Wins: <span id="wins">0</span> | Losses: <span id="losses">0</span></p>
+        </div>
+
+        <input type="number" id="guessInput" min="1" max="99" placeholder="Enter your guess">
+        <button id="submitBtn">Submit Guess</button>
+        <div class="guessHist">
+            <h3> Guesses: </h3>
+            <div id="guessList"></div>
+        </div>
+
+        <div id="message"></div>
+
+        <button class="reset-btn" style="display: none;" id="resetBtn">Play Again</button>
+    </div>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
