@@ -14,13 +14,28 @@ const musicLibrary = [
 
     {title: "Lady (Hear Me Tonight)",artist: "Modjo", genre: "Electronic", file:"music/Modjo - Lady (Hear Me Tonight).flac",img:"css/images/Modjoalbumcover.jpg"},
     {title: "You Could Be Loved",artist:"Bob Marley", genre:"Reggae",file:"music/Bob Marley & The Wailers - Could You Be Loved.flac",img:"css/images/BobMarley&theWailersUprising.jpg"},
-    {title: "Morning Final",artist:"Blue Oyster Cult", genre:"Rock",file:"/music/Blue Öyster Cult - Morning Final.m4a",img:"css/images/BlueOysterCultAgentsofFortune.jpg"}
+    {title: "Morning Final",artist:"Blue Oyster Cult", genre:"Rock",file:"/music/Blue Öyster Cult - Morning Final.m4a",img:"css/images/BlueOysterCultAgentsofFortune.jpg"},
+    {title: "Example Song",artist:"Blue Oyster Cult", genre:"Rock",file:"",img:"css/images/audioexample.png"},
+    {title: "Example Song",artist:"Kaskade", genre:"Electronic",file:"",img:"css/images/audioexample.png"},
+    {title: "Example Song",artist:"AC/DC", genre:"Rock",file:"",img:"css/images/audioexample.png"},
+    {title: "Example Song",artist:"Gerardo Ortiz", genre:"Banda",file:"",img:"css/images/audioexample.png"},
+    {title: "Example Song",artist:"Bruce Springsteen", genre:"Rock",file:"",img:"css/images/audioexample.png"},
+    {title: "Example Song",artist:"Tiesto", genre:"Electronic",file:"",img:"css/images/audioexample.png"},
+    {title: "Example Song",artist:"Pink Floyd", genre:"Rock",file:"",img:"css/images/audioexample.png"}
+
 
 ];
 const artistPhotos = {
   "Bob Marley":"css/images/bob_marley.jpg",
   "Blue Oyster Cult": "css/images/blueoystercult.jpg",
-  "Modjo":"css/images/modjo.jpg"
+  "Modjo":"css/images/modjo.jpg",
+  "Gerardo Ortiz":"css/images/randomuser.jpg",
+  "Pink Floyd":"css/images/randomuser.jpg",
+  "AC/DC":"css/images/randomuser.jpg",
+  "Bruce Springsteen":"css/images/randomuser.jpg",
+  "Kaskade":"css/images/randomuser.jpg",
+  "Tiesto":"css/images/randomuser.jpg"
+
 
 };
 

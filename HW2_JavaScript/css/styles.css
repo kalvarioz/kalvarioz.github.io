@@ -173,7 +173,7 @@ main {
 }
 
 .track-card img {
-  height: auto;
+  height: 220px;
   object-fit: cover;
   display: block;
 }
