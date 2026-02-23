@@ -1,17 +1,20 @@
 //Music player
 //Brandon Calvario
-// JS code to display and play music, and button functionality.
+// JS code to search for an artist, and sort based on name, user can click on artist and display and play music, 
 
 // Sources:
+// Bob Marley picture: https://www.imdb.com/name/nm0002490/
+// Blue Öyster Cult Picture: https://recordcollectormag.com/articles/blue-oyster-cult
+// Modjo picture: https://www.deezer.com/us/artist/1545
+
+// Album Covers: Wikipedia
+// Music: Physically sourced. 
 
 const musicLibrary = [
 
     {title: "Lady (Hear Me Tonight)",artist: "Modjo", genre: "Electronic", file:"music/Modjo - Lady (Hear Me Tonight).flac",img:"css/images/Modjoalbumcover.jpg"},
     {title: "You Could Be Loved",artist:"Bob Marley", genre:"Reggae",file:"music/Bob Marley & The Wailers - Could You Be Loved.flac",img:"css/images/BobMarley&theWailersUprising.jpg"},
     {title: "Morning Final",artist:"Blue Oyster Cult", genre:"Rock",file:"/music/Blue Öyster Cult - Morning Final.m4a",img:"css/images/BlueOysterCultAgentsofFortune.jpg"}
-    // {title: "", genre:"",file:"music/"},
-    // {title: "", genre:"",file:"music/"}
-
 
 ];
 const artistPhotos = {
@@ -34,6 +37,7 @@ const bannerImg= document.getElementById("artistBannerImg");
 const bannerName = document.getElementById("artistBannerName");
 const bannerCount = document.getElementById("artistBannerCount");
 
+// get list of artists music from array
 function getArtists() {
   const seen = [];
   const artists = [];
@@ -47,15 +51,15 @@ function getArtists() {
   }
   return artists;
 }
-
+// card for artist name and inforamtion
 function buildArtistCard(artistName) {
   const tracks = musicLibrary.filter(t => t.artist === artistName);
-
+  //card where artists profile will appear
   const card = document.createElement("div");
   card.className = "artist-card";
-
+  //element for the profile picture
   const img = document.createElement("img");
-  img.src = artistPhotos[artistName] || "music/default_artist.jpg";
+  img.src = artistPhotos[artistName];
   img.alt = artistName;
 
   const info = document.createElement("div");
@@ -80,6 +84,9 @@ function buildArtistCard(artistName) {
 
   return card;
 }
+
+//Inner track card, displays after artist is selected. follows
+//similar struture as artist card
 function buildTrackCard(track) {
   const card = document.createElement("div");
   card.className = "track-card";
@@ -110,7 +117,7 @@ function buildTrackCard(track) {
 
   return card;
 }
-
+//search artists, show green if there are artists or orange if not
 function renderArtists(query = "") {
   artistGrid.innerHTML = "";
   const q = query.trim().toLowerCase();
@@ -123,11 +130,11 @@ function renderArtists(query = "") {
 
   if (filtered.length === 0) {
     artistStatus.textContent = `No artists found for "${query}".`;
-    artistStatus.style.color = "#f59e0b";
+    artistStatus.style.color = "orange";
   } else {
     artistStatus.textContent =
       q === ""? `Showing all ${filtered.length} artists.`:`${filtered.length} artist(s) found for "${query}".`;
-    artistStatus.style.color = "#34d399";
+    artistStatus.style.color = "green";
     for (let i = 0; i < filtered.length; i++) {
       artistGrid.appendChild(buildArtistCard(filtered[i]));
     }
@@ -136,8 +143,8 @@ function renderArtists(query = "") {
 
 function showTrackView(artistName) {
   const tracks = musicLibrary.filter(t => t.artist === artistName);
-  bannerImg.src  = artistPhotos[artistName] || "music/default_artist.jpg";
-  bannerImg.alt  = artistName;
+  bannerImg.src= artistPhotos[artistName];
+  bannerImg.alt= artistName;
   bannerName.textContent  = artistName;
   bannerCount.textContent = tracks.length + " track" + (tracks.length !== 1 ? "s" : "");
   trackGrid.innerHTML = "";
