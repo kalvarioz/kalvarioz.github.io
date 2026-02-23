@@ -28,14 +28,14 @@ function isValid() {
 }
 
 function correct(index) {
-    const fb= document.getElementById(`q${index}feedback`);
-    const mark= document.getElementById(`mark${index}`);
-    const block= fb.closest(".questionblock");
+    const fb = document.getElementById(`q${index}feedback`);
+    const mark = document.getElementById(`mark${index}`);
+    const block = fb.closest(".questionblock");
     fb.textContent = "Correct!";
-    fb.className= "box box-correct";
-    mark.src="img/correct.png";
-    mark.alt="correct";
-    mark.style.visibility="visible"
+    fb.className = "box box-correct";
+    mark.src = "img/correct.png";
+    mark.alt = "correct";
+    mark.style.visibility = "visible"
     block.classList.add("questionblock-correct");
     block.classList.remove("questionblock-incorrect");
     score += 20;
@@ -43,16 +43,18 @@ function correct(index) {
 
 function incorrect(index) {
     const fb = document.getElementById(`q${index}feedback`);
-    const mark= document.getElementById(`mark${index}`);
-    const block= fb.closest(".questionblock");
+    const mark = document.getElementById(`mark${index}`);
+    const block = fb.closest(".questionblock");
     fb.textContent = "Incorrect!";
     fb.className = "box box-incorrect";
-    mark.src="img/incorrect.png";
-    mark.alt="incorrect";
-    mark.style.visibility="visible"
+    mark.src = "img/incorrect.png";
+    mark.alt = "incorrect";
+    mark.style.visibility = "visible"
     block.classList.add("questionblock-incorrect");
     block.classList.remove("questionblock-correct");
 }
+
+//uses ternary operators to determine correct or incorrect.
 function grade() {
     if (!isValid()) {
         return
