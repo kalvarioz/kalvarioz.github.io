@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Quiz</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
+
+</head>
+
+<body>
+
+
+
+    <div class="quiz_out">
+        <div class="header">
+            <h1> Bike Quiz</h1>
+        </div>
+        <div id="validation" class="val-hidden"></div>
+        <div class=questionblock>
+            <div class=questionlabel>
+                <img id="mark1" class="markimg" src="" alt=""/>
+
+                Question 1:<br> There are many types of materials that are used to build bikes (Steel, Aluminum,
+                Titanium, Carbon). among them, which is the lightest?
+            </div>
+            <input type="text" id="q1">
+            <div id="q1feedback" class="box box-hidden"></div>
+        </div>
+
+        <div class="questionblock">
+            <div class="questionlabel">
+                <img id="mark2" class="markimg" src="" alt=""/>
+
+                Question 2:<br> Which of these names is real bike Brand?
+            </div>
+            <select id="q2">
+                <option value="Select">Select:</option>
+
+                <option value="Santa Maria">Santa Maria</option>
+                <option value="Santa Claus">Santa Claus</option>
+                <option value="Santa Cruz">Santa Cruz</option>
+                <option value="Santa Nella">Santa Nella</option>
+                <option value="Santa Ana">Santa Ana</option>
+            </select>
+            <div id="q2feedback" class="box box-hidden"></div>
+        </div>
+        <div class="questionblock">
+            <div class="questionlabel">
+                <img id="mark3" class="markimg" src="" alt=""/>
+                Question 3:<br> Which is the best way to remove a tire from a bike rim? (assuming you are in a bike
+                shop)
+            </div>
+
+            <div id="q3Choices">
+                <div class="choice-row">
+                    <input type="radio" name="q3" id="q3screwdriver" value="screwdriver" />
+                    <label for="q3screwdriver">Screwdriver</label>
+                </div>
+                <div class="choice-row">
+                    <input type="radio" name="q3" id="q3hands" value="hands" />
+                    <label for="q3hands">Your hands</label>
+                </div>
+                <div class="choice-row">
+                    <input type="radio" name="q3" id="q3tirelev" value="tire-lever" />
+                    <label for="q3tirelev">Tire lever</label>
+                </div>
+                <div class="choice-row">
+                    <input type="radio" name="q3" id="q3aircomp" value="air-compressor" />
+                    <label for="q3aircomp">Air compressor</label>
+                </div>
+            </div>
+
+            <div id="q3feedback" class="box box-hidden"></div>
+        </div>
+
+        <div class="questionblock">
+            <div class="questionlabel">
+                <img id="mark4" class="markimg" src="" alt=""/>
+
+                Question 4:<br> In the late 80's - 90's,
+                the average mountain biker had the tendancy to completely avoid carbon. For what reasons?
+            </div>
+            <div class="choice-row">
+                <input type="checkbox" id="made-bike-funny">
+                <label for="made-bike-funny">It made bikes look funny: they thought they would be made fun of </label>
+            </div>
+            <div class="choice-row">
+                <input type="checkbox" id="failiure-prone">
+                <label for="failiure-prone">Prone to failure: due to inconsistent quality control,
+                    bikes would crack, delaminate, and snap quickly under stress. </label>
+            </div>
+            <div class="choice-row">
+                <input type="checkbox" id="poor-quality">
+                <label for="poor-quality">Quality control: the technology was adapted from road cycling and
+                    aerospace applications, which never took into consideration the forces mountain bikes
+                    inconsistent quality
+                </label>
+            </div>
+            <div class="choice-row">
+                <input type="checkbox" id="party">
+                <label for="party">Because it was the 80's and 90's: they were too busy going to parties and discos
+                </label>
+            </div>
+            <div id="q4feedback" class="box box-hidden"></div>
+        </div>
+
+
+        <div class="questionblock">
+            <div class="questionlabel">
+                <img id="mark5" class="markimg" src="" alt=""/>
+
+                Question 5:<br> Fort ord is one of the closest national monuments where you can ride your bike, hike, or
+                go on a run!
+                How many miles of trail does it have (currently open)?
+            </div>
+            <input type="number" id="q5" min="0" max="100">
+            <div id="q5feedback" class="box box-hidden"></div>
+        </div>
+
+
+        <div class="text-center">
+            <button class="btn-submit" id="submitBtn">Submit</button>
+        </div>
+        <div id="totalScore" class="score-box score-hidden"></div>
+        <div id="congratsMsg" class="congrats-box congrats-hidden"> Congrats! </div>
+        <div id="totalAttempts" class="attempts-row"></div>
+    </div>
+
+</body>
+
+</html>
