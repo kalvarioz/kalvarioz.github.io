@@ -1,0 +1,219 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f0f0f;
+  color: #e0e0e0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Header === */
+header {
+  background-color: #2e1a1a;
+  padding: 2rem;
+  text-align: center;
+  border-bottom: 2px solid #ed3a3a;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #fa8b8b;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #af9c9c;
+  margin-top: 0.4rem;
+}
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+}
+.hidden {
+  display: none;
+}
+.search-section {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+#artistSearch {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #5c3d3d;
+  background-color: #2e1e1e;
+  color: #e0e0e0;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+#artistClearBtn {
+  padding: 0.75rem 1.25rem;
+  background-color: #442d2d;
+  color: #fdb5b5;
+  border: 1px solid #6d4c4c;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+#artistClearBtn:hover {
+  background-color: #5c3d3d;
+}
+
+.status-msg {
+  text-align: center;
+  color: #806b6b;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.artist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.25rem;
+}
+
+.artist-card {
+  background-color: #2e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #442d2d;
+  cursor: pointer;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.artist-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.artist-card-info {
+  padding: 0.75rem 0.5rem;
+}
+
+.artist-card-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.artist-card-count {
+  font-size: 0.75rem;
+  color: #806b6b;
+  margin-top: 0.2rem;
+}
+
+.track-view-header {
+  margin-bottom: 1.5rem;
+}
+
+#backBtn {
+  background: none;
+  border: 1px solid #6d4c4c;
+  color: #fdb5b5;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-bottom: 1.25rem;
+  transition: background-color 0.2s;
+}
+.artist-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #2e1a1a;
+  border-radius: 12px;
+  padding: 10px;
+  border: 1px solid #442d2d;
+}
+
+.artist-banner img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  border: 2px solid #ed3a3a;
+}
+
+.artist-banner h2 {
+  font-size: 1.5rem;
+  color: #fa8b8b;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1.25rem;
+}
+
+.track-card {
+  background-color: #2e1e1e;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #442d2d;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.track-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+
+.track-info {
+  padding: 0.75rem;
+}
+
+.track-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  margin-bottom: 0.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.track-genre {
+  font-size: 0.75rem;
+  color: #806b6b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.track-card audio {
+  width: 100%;
+  margin-top: 0.5rem;
+  accent-color: #ed3a3a;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 15px;
+  color: #634b4b;
+  border-top: 1px solid #1f1f1f;
+}

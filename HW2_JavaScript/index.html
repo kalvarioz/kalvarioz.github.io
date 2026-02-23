@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music Library</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Music Library</h1>
+  </header>
+
+ <main>
+
+    <section id="artistView">
+      <div class="search-section">
+        <input type="text"id="artistSearch"placeholder="Search by artist name..."/>
+        <button id="artistClearBtn">Clear</button>
+      </div>
+
+      <p id="artistStatus" class="status-msg">Showing all artists.</p>
+      <div id="artistGrid" class="artist-grid"></div>
+    </section>
+
+    <section id="trackView" class="hidden">
+      <div class="track-view-header">
+        <button id="backBtn">← Back to Artists</button>
+        <div class="artist-banner">
+          <img id="artistBannerImg" src="" alt="" />
+          <div>
+            <h2 id="artistBannerName"></h2>
+            <p id="artistBannerCount" class="subtitle"></p>
+          </div>
+        </div>
+      </div>
+
+      <p id="trackStatus" class="status-msg"></p>
+      <div id="trackGrid" class="results-grid"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Music Library &copy; 2025 &mdash; Local Files Only</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
