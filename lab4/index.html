@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<h1>Sign Up Form</h1>
+
+<fieldset>
+    <legend>Sign Up</legend>
+
+    First Name: <input type="text" id="firstName"><br>
+    Last Name:  <input type="text" id="lastName"><br>
+    Email:<input type="text" id="email"><br>
+    Phone Number: <input type="text" id="phone"><br><br>
+    Zip Code: <input type="text" id="zipCode">  <span id="zipError"></span><br>
+    City: <span id="city"></span><br>
+    Latitude: <span id="latitude"></span><br>
+    Longitude: <span id="longitude"></span><br><br>
+    State: <select id="stateSelect"><option value="">-- Select a State --</option></select><br>
+    Select a County: <select id="countySelect"><option value="">-- Select a County --</option></select><br>
+    Desired Username: <input type="text" id="username"><br>
+    <span id="usernameMessage"></span><br>
+    Password: <input type="password" id="password"><br>
+    <span id="suggestedDisplay"></span><br>
+    Type Password Again: <input type="password" id="passwordConfirm"><br>
+    <input type="submit" value="Sign up!" id="submitBtn"><br>
+    <span class="error" id="usernameError"></span>
+    <span class="error" id="passwordError"></span>
+    <span class="error" id="passwordMatchError"></span>
+
+</fieldset>
+
+<script src="js/script.js"></script>
+</body>
+</html>
